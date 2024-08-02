@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concert Ticket Booking</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            width: 700px;
+            margin: auto;
+        }
+        .form-container h1 {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 2px solid #000;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: yellowgreen;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="form-container">
+            <h1><u>Book Tickets for Vijay Antony Live in Concert</u></h1>
+            <form action="/book_tickets" method="post">
+                <table>
+                    <tr>
+                        <td><label for="name">Full Name:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone Number:</label></td>
+                        <td><input type="tel" id="phone" name="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="concert_date">Concert Date:</label></td>
+                        <td><input type="date" id="concert_date" name="concert_date" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ticket_type">Ticket Type:</label></td>
+                        <td>
+                            <select id="ticket_type" name="ticket_type" required>
+                                <option value="silver">Silver - Rs. 750</option>
+                                <option value="gold">Gold - Rs. 1000</option>
+                                <option value="platinum">Platinum - Rs. 1499</option>
+                                <option value="fanpit">Fanpit - Rs. 2999</option>
+                                <option value="mip">MIP - Rs. 7000</option>
+                                <option value="stage">Stage - Rs. 29999</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="num_tickets">Number of Tickets:</label></td>
+                        <td><input type="number" id="num_tickets" name="num_tickets" min="1" required></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="BOOK NOW">
+            </form>
+        </div>
+    </center>
+</body>
+</html>
